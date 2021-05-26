@@ -40,7 +40,7 @@ platform(
         "@bazel_tools//tools/cpp:clang",
     ],
     exec_properties = {
-        "container-image": "docker://registry.wgtwo.com/pub/infra/bazel-toolchain-container:bazel4.1.0-rbe-ubuntu16-04-1609bd3cb6",
+        "container-image": "docker://registry.wgtwo.com/pub/infra/bazel-toolchain-container:bazel4.1.0-rbe-ubuntu16-04-421128f0a1",
         "OSFamily": "Linux",
     },
     parents = ["@local_config_platform//:host"],
