@@ -53,7 +53,10 @@ platform(
     ],
     exec_properties = create_rbe_exec_properties_dict(
         container_image = "docker://registry.wgtwo.com/pub/infra/bazel-toolchain-container:bazel4.1.0-rbe-ubuntu16-04-81a2d86b49",
+        docker_network = "standard",
         docker_privileged = True,
+        docker_run_as_root = True,
+        docker_use_urandom = True,
         os_family = "Linux",
     ),
     parents = ["@local_config_platform//:host"],
