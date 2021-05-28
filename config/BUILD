@@ -56,6 +56,7 @@ platform(
         docker_network = "standard",
         docker_privileged = True,
         docker_run_as_root = True,
+        docker_sibling_containers = True,
         docker_use_urandom = True,
         os_family = "Linux",
     ),
