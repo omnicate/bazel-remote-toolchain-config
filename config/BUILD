@@ -32,6 +32,16 @@ toolchain(
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
 )
 
+# docker_toolchain_configure(
+#     name = "remote_docker_config",
+#     docker_flags = [
+#         "--tls",
+#         "--log-level=info",
+#     ],
+#     docker_path = "/bin/docker",
+#     gzip_path = "/bin/gzip",
+# )
+
 platform(
     name = "platform",
     constraint_values = [
@@ -40,7 +50,7 @@ platform(
         "@bazel_tools//tools/cpp:clang",
     ],
     exec_properties = {
-        "container-image": "docker://registry.wgtwo.com/pub/infra/bazel-toolchain-container:bazel4.1.0-rbe-ubuntu16-04-421128f0a1",
+        "container-image": "docker://registry.wgtwo.com/pub/infra/bazel-toolchain-container:bazel4.1.0-rbe-ubuntu16-04-21c814d19a",
         "OSFamily": "Linux",
     },
     parents = ["@local_config_platform//:host"],
