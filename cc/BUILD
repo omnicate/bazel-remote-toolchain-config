@@ -14,11 +14,11 @@
 
 # This becomes the BUILD file for @local_config_cc// under non-BSD unixes.
 
-package(default_visibility = ["//visibility:public"])
-
 load(":cc_toolchain_config.bzl", "cc_toolchain_config")
 load(":armeabi_cc_toolchain_config.bzl", "armeabi_cc_toolchain_config")
 load("@rules_cc//cc:defs.bzl", "cc_toolchain", "cc_toolchain_suite")
+
+package(default_visibility = ["//visibility:public"])
 
 licenses(["notice"])  # Apache 2.0
 
@@ -98,8 +98,7 @@ cc_toolchain_config(
         "objcopy": "/usr/bin/objcopy",
         "objdump": "/usr/bin/objdump",
         "strip": "/usr/bin/strip"},
-    compile_flags = ["-U_FORTIFY_SOURCE",
-    "-fstack-protector",
+    compile_flags = ["-fstack-protector",
     "-Wall",
     "-Wunused-but-set-parameter",
     "-Wno-free-nonheap-object",
