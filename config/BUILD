@@ -42,7 +42,7 @@ platform(
         "@bazel_tools//tools/cpp:clang",
     ],
     exec_properties = {
-        "container-image": "docker://registry.wgtwo.com/reg/infra/ci/buildbuddy-rbe@sha256:b086ade7a9dae9b59c5b46fbaa88f7ef8593dc366171c37de81d74c85b0060ee",
+        "container-image": "docker://registry.wgtwo.com/reg/infra/ci/buildbuddy-rbe@sha256:762ed10332dca8e6a2922c64fea95056adcb574fb32aece2a447c3f17f475618",
         "OSFamily": "Linux",
     },
 )
