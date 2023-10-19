@@ -100,6 +100,10 @@ cc_toolchain_config(
     cxx_flags = ["-std=c++0x"],
     dbg_compile_flags = ["-g"],
     host_system_name = "local",
+    library_search_directories = [
+        "/lib/x86_64-linux-gnu",
+        "/usr/lib/x86_64-linux-gnu",
+    ],
     link_flags = [
         "-fuse-ld=gold",
         "-Wl,-no-as-needed",
