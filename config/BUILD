@@ -29,7 +29,7 @@ toolchain(
         "@platforms//os:linux",
         "@platforms//cpu:x86_64",
     ],
-    toolchain = "//cc:cc-compiler-k8",
+    toolchain = "//.//cc:cc-compiler-k8",
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
 )
 
@@ -42,7 +42,7 @@ platform(
         "@bazel_tools//tools/cpp:clang",
     ],
     exec_properties = {
-        "container-image": "docker://registry.wgtwo.com/pub/bazel-builder:prod-4f92974f0a-1704809442",
+        "container-image": "docker://registry.wgtwo.com/pub/bazel-builder@sha256:97d9eab02f515449331999ef3dcff14cbf09592db1e7fa6ceea19edf91df7e29",
         "OSFamily": "Linux",
     },
 )
